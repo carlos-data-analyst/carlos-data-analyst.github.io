@@ -1,0 +1,221 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px; /* Evita que el menú sticky tape los títulos al hacer clic */
+}
+
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* ==========================================
+   Configuración Navbar
+   ========================================== */
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: aquamarine;
+}
+
+/* ==========================================
+   Sección Sobre mí
+   ========================================== */
+
+h1 {
+    color: #000000;
+}
+
+p {
+    font-size: 18px;
+    color: #000000;
+    text-align: justify;
+}
+
+.contenedor_sobreMi {
+    display: flex;
+    gap: 25px;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.foto_perfil {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ==========================================
+   Sección Proyectos (Estilos de las Cajas)
+   ========================================== */
+
+.contenedor_proyectos {
+    padding: 10px 0;
+}
+
+.grid_layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Estilo morado para hacer juego con el footer */
+.caja {
+    border: 1px solid #000000;
+    padding: 20px;
+    background-color: blueviolet;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.caja h3 {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.caja h3 a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.caja h3 a:hover {
+    color: #e0d0ff;
+}
+
+.caja p {
+    color: #ffffff;
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.caja p.tech {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.caja .link-video {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.caja .link-video:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   Sección Experiencia
+   ========================================== */
+
+.contenedor_experiencia {
+    padding: 10px 0;
+}
+
+/* Clase unificada para todas las tarjetas de empleo */
+.tarjeta_experiencia {
+    border: 1px solid #000000;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+}
+
+.contacto_experiencia {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.contacto_experiencia ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contacto_experiencia li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* ==========================================
+   Sección Educación
+   ========================================== */
+
+.educacion_continua_y_formal {
+    padding: 10px 0;
+}
+
+.educacion_continua_y_formal a {
+    text-decoration: none;
+}
+
+.educacion_continua,
+.educacion_formal {
+    border: 1px solid #000000;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+
+footer {
+    background-color: blueviolet;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+footer p {
+    color: aliceblue;
+    font-size: 22px;
+    text-align: center;
+}
+
+footer img {
+    width: 45px;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+footer img:hover {
+    transform: scale(1.15);
+}
+
+/* ==========================================
+   Adaptabilidad para Pantallas Pequeñas (Mobile)
+   ========================================== */
+
+@media (max-width: 992px) {
+    .grid_layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor_sobreMi {
+        flex-direction: column;
+    }
+
+    .grid_layout {
+        grid-template-columns: 1fr;
+    }
+
+    .foto_perfil {
+        width: 250px;
+        margin: 0 auto;
+    }
+}
